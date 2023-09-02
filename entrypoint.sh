@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "hello world!"
+echo "Hello world! You are testing docker builds and pipelines!"
