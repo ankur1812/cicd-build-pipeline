@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build and push docker image
         run: |
-          docker login --username ankur1812 --password ${{secrets.GHCR_ACCESS_TOKEN}}
+          docker login --username ankur1812 --password-stdin ${{ secrets.GHCR_ACCESS_TOKEN }} ghcr.io
           docker build . --tag ghcr.io/ankur1812/hello-world-ghcr:latest
           docker push ghcr.io/ankur1812/hello-world-ghcr:latest
 
